@@ -15,4 +15,4 @@ export RACK_ENV=development
 export PAGER="col -b  | open -a /Applications/Safari.app -f"
 # export PAGER="col -b | open -a /Applications/Google\ Chrome.app -f"
 setopt autocd
-export cdpath=( $HOME/repos/jswright61/ss_rails $HOME/dev/src/interact $HOME/commands $HOME/repos/jswright61 $HOME/dev )
+# export cdpath=( $HOME/repos/jswright61/ss_rails $HOME/dev/src/interact $HOME/commands $HOME/repos/jswright61 $HOME/dev )
