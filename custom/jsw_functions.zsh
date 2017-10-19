@@ -96,3 +96,12 @@ function m-theme() {
         exit 101
     fi
 }
+
+function cfiles() {
+     if [ $# -eq 0 ]; then
+        cdir="."
+    else
+        cdir="$1"
+    fi
+    ls -Afqp $cdir | grep -v '/$' | wc -l
+}
