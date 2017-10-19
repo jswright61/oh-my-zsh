@@ -51,7 +51,7 @@ case $(box_name) in
     BOX_COLOR=011
     ;;
   [Rr]odne*)
-    BOX_COLOR=051
+    BOX_COLOR=123
     ;;
   [Kk]at|[Kk]athlee*)
     BOX_COLOR=013
