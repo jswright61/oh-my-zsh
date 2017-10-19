@@ -61,8 +61,7 @@ case $(box_name) in
     ;;
 esac
 
-
-PROMPT="╭─%{$FG[$NCOLOR]%}%n%{$reset_color%} %{$FG[239]%}at%{$reset_color%} %{$FG[$BOX_COLOR]%}$($BOX_NAME)%{$reset_color%} %{$FG[239]%}in%{$reset_color%} %{$terminfo[bold]$FG[226]%}${current_dir}%{$reset_color%}${git_info} %{$FG[239]%}using%{$FG[243]%}${ruby_env}
+PROMPT="╭─%{$FG[$NCOLOR]%}%n%{$reset_color%} %{$FG[239]%}at%{$reset_color%} %{$FG[$BOX_COLOR]%}$BOX_NAME%{$reset_color%} %{$FG[239]%}in%{$reset_color%} %{$terminfo[bold]$FG[226]%}${current_dir}%{$reset_color%}${git_info} %{$FG[239]%}using%{$FG[243]%}${ruby_env}
 ╰─${prompt_char}%{$reset_color%} "
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$FG[239]%}on%{$reset_color%} %{$fg[255]%}"
