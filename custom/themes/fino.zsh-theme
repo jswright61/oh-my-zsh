@@ -16,6 +16,18 @@ function prompt_char {
   echo '○'
 }
 
+function box_name {
+    if [ -f ~/.box-name ]; then
+      cat ~/.box-name
+    elif [ -f /etc/.box-name ]; then
+      cat /etc/.box-name
+    else
+      echo ${SHORT_HOST:-$HOST}
+    fi
+}
+
+export BOX_NAME=$(box_name)
+
 local ruby_env=''
 if which rvm-prompt &> /dev/null; then
   ruby_env=' ‹$(rvm-prompt i v g)›%{$reset_color%}'
@@ -39,12 +51,9 @@ case $(box_name) in
     BOX_COLOR=011
     ;;
   [Rr]odne*)
-    BOX_COLOR=153
+    BOX_COLOR=051
     ;;
-  [Gg]ary|[Gg]ary*)
-    BOX_COLOR=165
-    ;;
-  [Aa]lber*)
+  [Kk]at|[Kk]athlee*)
     BOX_COLOR=013
     ;;
   *)
@@ -52,7 +61,8 @@ case $(box_name) in
     ;;
 esac
 
-PROMPT="╭─%{$FG[$NCOLOR]%}%n%{$reset_color%} %{$FG[239]%}at%{$reset_color%} %{$FG[$BOX_COLOR]%}$BOX_NAME%{$reset_color%} %{$FG[239]%}in%{$reset_color%} %{$terminfo[bold]$FG[226]%}${current_dir}%{$reset_color%}${git_info} %{$FG[239]%}using%{$FG[243]%}${ruby_env}
+
+PROMPT="╭─%{$FG[$NCOLOR]%}%n%{$reset_color%} %{$FG[239]%}at%{$reset_color%} %{$FG[$BOX_COLOR]%}$($BOX_NAME)%{$reset_color%} %{$FG[239]%}in%{$reset_color%} %{$terminfo[bold]$FG[226]%}${current_dir}%{$reset_color%}${git_info} %{$FG[239]%}using%{$FG[243]%}${ruby_env}
 ╰─${prompt_char}%{$reset_color%} "
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$FG[239]%}on%{$reset_color%} %{$fg[255]%}"
