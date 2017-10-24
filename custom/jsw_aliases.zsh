@@ -16,7 +16,7 @@ alias gl='git log --oneline'
 
 alias be='bundle exec'
 alias ts="date +%s"
-alias subl="/usr/local/bin/subl -n "
+alias subl="/usr/local/bin/subl --new-window "
 # created function
 # alias psg='ps aux | grep '
 
