@@ -105,3 +105,20 @@ function cfiles() {
     fi
     ls -Afqp $cdir | grep -v '/$' | wc -l
 }
+
+# for github figerprints
+# ssh-keygen -l -E md5 -f ~/.ssh/my-github-key.pub
+# https://gist.github.com/tuxfight3r/b92ad1450067bf4336ee
+
+
+function fingerprints() {
+    if [ $# -eq 0 ]; then
+        keyfile="$HOME/Dropbox/Scott/authorized_keys"
+    else
+        keyfile="$1"
+    fi
+
+  while read line
+    do ssh-keygen -l  -E MD5 -f /dev/stdin <<< $line
+  done < "$keyfile"
+}
