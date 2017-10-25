@@ -9,7 +9,7 @@ function envg() {
 function pub-ip() {
     export PUBLIC_IP=`curl https://api.ipify.org`
     if [ $# -eq 0 ]; then
-        echo $PUBLIC_IP
+        echo "Public IP: $PUBLIC_IP"
     else
         if [[ $1 == "silent" ]]; then
         fi
@@ -17,7 +17,7 @@ function pub-ip() {
 }
 
 function jdate() {
-    date -r $1 "+%Y-%m-%d %H:%M:%S (%a)"
+date -r $1 "+%Y-%m-%d %H:%M:%S (%a)"
 }
 
 

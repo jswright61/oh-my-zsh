@@ -6,32 +6,17 @@
 # export PAGER="col -b | open -a /Applications/Google\ Chrome.app -f"
 # export PAGER="col -b | open -a /Applications/Safari.app -f"
 # export PAGER=less # default
-# http://zsh.sourceforge.net/Doc/Release/Conditional-Expressions.html
-# -a file exists -f REGULAR file exists -d DIRECTORY exists
-
-if [[ -z "$SSH_CONNECTION" && -a /Applications/Safari.app ]]; then
-  # export PAGER="col -b  | open -a /Applications/Safari.app -f"
+if [[ -z "$SSH_CONNECTION" && -f /Applications/Safari.app ]]; then
+  export PAGER="col -b  | open -a /Applications/Safari.app -f"
 else
   export PAGER=less
 fi
-
 setopt autocd
-
 # export cdpath=( $HOME/repos/jswright61/ss_rails $HOME/dev/src/interact $HOME/commands $HOME/repos/jswright61 $HOME/dev )
 # Preferred editor for local and remote sessions
-if [[ -z "$SSH_CONNECTION" && -f /usr/local/bin/code_wait ]]; then
-  export VISUAL="$VISUAL_CODE_EDITOR"
-elif [[ -z "$SSH_CONNECTION" && -f /usr/local/bin/code_wait ]]; then
-  export VISUAL="$VISUAL_CODE_EDITOR --new-window --wait "
+if [[ -z "$SSH_CONNECTION" && -f /usr/local/bin/subl ]]; then
+  export VISUAL="/usr/local/bin/subl --wait --new-window "
 else
-  export VISUAL="$CODE_EDITOR"
+  export VISUAL="vi"
 fi
 export EDITOR="$VISUAL"
-
-if [ -d /usr/local/share/jsw_env ]; then
-  for f in /usr/local/share/jsw_env/*; do source $f; done
-fi
-
-export JSW_ENV_LOADED=$(date +'%s')
-
-export STRIPE_DO_NOT_MAIL="false"
