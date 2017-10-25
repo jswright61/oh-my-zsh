@@ -14,7 +14,6 @@ PATH=$PATH:/bin
 PATH=$PATH:/usr/local/sbin
 PATH=$PATH:/usr/sbin
 PATH=$PATH:/sbin
-PATH=$PATH:/opt/oracle/bin
 PATH=$PATH:/Users/sswright/bin/Sencha/Cmd
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH
