@@ -1,9 +1,5 @@
 # source "$HOME/.rvm/scripts/rvm"
 
-export ORACLE_HOME=/opt/oracle
-#export ORACLI_HOME=$ORACLE_HOME/instantclient_11_2
-export ORACLI_HOME=$ORACLE_HOME/bin
-export TNS_ADMIN=$ORACLI_HOME/network/admin
 
 export RAILS_ENV=development
 export RACK_ENV=development
