@@ -44,7 +44,7 @@ case $(box_name) in
   [Gg]ary|[Gg]ary*)
     BOX_COLOR=165
     ;;
-  [Kk]at|[Kk]athlee*)
+  [Aa]lber*)
     BOX_COLOR=013
     ;;
   *)
