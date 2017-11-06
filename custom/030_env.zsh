@@ -11,11 +11,15 @@ if [[ -z "$SSH_CONNECTION" && -f /Applications/Safari.app ]]; then
 else
   export PAGER=less
 fi
+
 setopt autocd
+
 # export cdpath=( $HOME/repos/jswright61/ss_rails $HOME/dev/src/interact $HOME/commands $HOME/repos/jswright61 $HOME/dev )
 # Preferred editor for local and remote sessions
-if [[ -z "$SSH_CONNECTION" && -f /usr/local/bin/subl ]]; then
-  export VISUAL="/usr/local/bin/subl --wait --new-window "
+if [[ -z "$SSH_CONNECTION" && -f /usr/local/bin/subl_wait ]]; then
+  export VISUAL="subl_wait"
+elif [[ -z "$SSH_CONNECTION" && -f /usr/local/bin/subl ]]; then
+  export VISUAL="subl --new-window --wait "
 else
   export VISUAL="vi"
 fi

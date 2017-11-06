@@ -17,7 +17,7 @@ function pub-ip() {
 }
 
 function jdate() {
-date -r $1 "+%Y-%m-%d %H:%M:%S (%a)"
+    date -r $1 "+%Y-%m-%d %H:%M:%S (%a)"
 }
 
 
