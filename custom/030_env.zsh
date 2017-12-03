@@ -25,6 +25,6 @@ else
 fi
 export EDITOR="$VISUAL"
 
-if [ -f /usr/local/shared/na.sh ]; then
-  source /usr/local/shared/na.sh
+if [ -d /usr/local/share/jsw_env ]; then
+  for f in /usr/local/share/jsw_env/*; do source $f; done
 fi
