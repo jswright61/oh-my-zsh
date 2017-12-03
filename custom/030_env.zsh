@@ -24,3 +24,7 @@ else
   export VISUAL="vi"
 fi
 export EDITOR="$VISUAL"
+
+if [ -f /usr/local/shared/na.sh ]; then
+  source /usr/local/shared/na.sh
+fi
