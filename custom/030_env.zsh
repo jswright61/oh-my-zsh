@@ -28,3 +28,5 @@ export EDITOR="$VISUAL"
 if [ -d /usr/local/share/jsw_env ]; then
   for f in /usr/local/share/jsw_env/*; do source $f; done
 fi
+
+export JSW_ENV_LOADED=$(date +'%s')
