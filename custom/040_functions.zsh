@@ -9,7 +9,7 @@ function envg() {
 function pub-ip() {
     export PUBLIC_IP=`curl https://api.ipify.org`
     if [ $# -eq 0 ]; then
-        echo "Public IP: $PUBLIC_IP"
+        echo $PUBLIC_IP
     else
         if [[ $1 == "silent" ]]; then
         fi
