@@ -6,8 +6,11 @@
 # export PAGER="col -b | open -a /Applications/Google\ Chrome.app -f"
 # export PAGER="col -b | open -a /Applications/Safari.app -f"
 # export PAGER=less # default
-if [[ -z "$SSH_CONNECTION" && -f /Applications/Safari.app ]]; then
-  export PAGER="col -b  | open -a /Applications/Safari.app -f"
+# http://zsh.sourceforge.net/Doc/Release/Conditional-Expressions.html
+# -a file exists -f REGULAR file exists -d DIRECTORY exists
+
+if [[ -z "$SSH_CONNECTION" && -a /Applications/Safari.app ]]; then
+  # export PAGER="col -b  | open -a /Applications/Safari.app -f"
 else
   export PAGER=less
 fi
