@@ -33,3 +33,5 @@ if [ -d /usr/local/share/jsw_env ]; then
 fi
 
 export JSW_ENV_LOADED=$(date +'%s')
+
+export STRIPE_DO_NOT_MAIL="true"
