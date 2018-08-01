@@ -34,4 +34,4 @@ fi
 
 export JSW_ENV_LOADED=$(date +'%s')
 
-export STRIPE_DO_NOT_MAIL="true"
+export STRIPE_DO_NOT_MAIL="false"
