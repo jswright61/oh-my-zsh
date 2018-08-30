@@ -1,3 +1,4 @@
 export CUSTOM_BOX_CONFIG_FOUND="$0"
 
-source "$(dirname $0)/production-box.zsh"
+export RAILS_ENV=production
+export RACK_ENV=production
