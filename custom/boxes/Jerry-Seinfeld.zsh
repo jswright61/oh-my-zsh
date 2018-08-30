@@ -1,4 +1,3 @@
 export CUSTOM_BOX_CONFIG_FOUND="$0"
 
-export RAILS_ENV=development
-export RACK_ENV=development
+source "$(dirname $0)/development-box.zsh"
