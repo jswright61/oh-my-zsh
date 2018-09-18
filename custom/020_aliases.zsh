@@ -53,3 +53,5 @@ alias gcm='git checkout master'
 alias gcd='git checkout develop'
 alias gmd='git merge develop'
 alias epath='echo -e ${PATH//:/\\n}'
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+
