@@ -58,4 +58,5 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 # sam phippen https://twitter.com/samphippen/status/1017738991012114433
 alias typeless='history | tail -n 2000 | sed "s/.*  //" | sort | uniq -c | sort -g | tail -n 65'
 
-alias gca='git add --all && git commit && git push'
+alias gca='git add --all && git commit'
+alias gcap='git add --all && git commit && git push'
