@@ -55,3 +55,7 @@ alias gmd='git merge develop'
 alias epath='echo -e ${PATH//:/\\n}'
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
+# sam phippen https://twitter.com/samphippen/status/1017738991012114433
+alias typeless='history | tail -n 2000 | sed "s/.*  //" | sort | uniq -c | sort -g | tail -n 100'
+
+alias gca='git add --all && git commit && git push'
