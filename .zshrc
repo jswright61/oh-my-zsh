@@ -55,6 +55,8 @@ ZSH_THEME="fino"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git rails ruby jump brew history-substring-search)
 
+export ZSH_DISABLE_COMPFIX="true"
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
