@@ -45,7 +45,7 @@ alias reload='source ~/.zshrc'
 
 alias ll='ls -lha'
 
-alias oh-my='subl ~/.oh-my-zsh'
+alias oh-my="$GUI_EDITOR ~/.oh-my-zsh"
 
 alias gca='git add --all && git commit'
 alias gbd='git branch -d '
@@ -61,5 +61,6 @@ alias typeless='history | tail -n 2000 | sed "s/.*  //" | sort | uniq -c | sort 
 alias gca='git add --all && git commit'
 alias gcap='git add --all && git commit && git push'
 
-alias hist_all='subl ~/.pry_history ~/.zsh_history ~/.mysql_history ~/.irb-history ~/.psql_history ~/.bash_history ~/.guard_history ~/.php_history'
-alias hist='subl ~/.zsh_history ~/.pry_history'
+alias hist_all="$GUI_EDITOR ~/.pry_history ~/.zsh_history ~/.mysql_history ~/.irb-history ~/.psql_history ~/.bash_history ~/.guard_history ~/.php_history"
+alias hist="$GUI_EDITOR ~/.zsh_history ~/.pry_history"
+alias oh="$GUI_EDITOR ~/.oh-my-zsh"
