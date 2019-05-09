@@ -19,12 +19,12 @@ setopt autocd
 
 # export cdpath=( $HOME/repos/jswright61/ss_rails $HOME/dev/src/interact $HOME/commands $HOME/repos/jswright61 $HOME/dev )
 # Preferred editor for local and remote sessions
-if [[ -z "$SSH_CONNECTION" && -f /usr/local/bin/subl_wait ]]; then
-  export VISUAL="subl_wait"
-elif [[ -z "$SSH_CONNECTION" && -f /usr/local/bin/subl ]]; then
-  export VISUAL="subl --new-window --wait "
+if [[ -z "$SSH_CONNECTION" && -f /usr/local/bin/code_wait ]]; then
+  export VISUAL="$VISUAL_CODE_EDITOR"
+elif [[ -z "$SSH_CONNECTION" && -f /usr/local/bin/code_wait ]]; then
+  export VISUAL="$VISUAL_CODE_EDITOR --new-window --wait "
 else
-  export VISUAL="vi"
+  export VISUAL="$CODE_EDITOR"
 fi
 export EDITOR="$VISUAL"
 
