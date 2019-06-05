@@ -10,3 +10,4 @@ log/
 .DS_Store
 custom/private/*
 !.keep
+!custom/private/empty.zsh
