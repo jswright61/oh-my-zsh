@@ -8,3 +8,4 @@ cache/
 log/
 custom/private/*
 !.keep
+!custom/private/empty.zsh
