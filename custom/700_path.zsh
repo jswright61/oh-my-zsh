@@ -15,4 +15,7 @@ PATH=$PATH:/usr/local/sbin
 PATH=$PATH:/usr/sbin
 PATH=$PATH:/sbin
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+if [[ -d $HOME/go/bin/ ]];then 
+    PATH=$PATH:$HOME/go/bin
+fi
 export PATH
