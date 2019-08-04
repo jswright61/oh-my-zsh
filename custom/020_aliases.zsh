@@ -64,3 +64,4 @@ alias gcap='git add --all && git commit && git push'
 alias hist_all="$GUI_EDITOR ~/.pry_history ~/.zsh_history ~/.mysql_history ~/.irb-history ~/.psql_history ~/.bash_history ~/.guard_history ~/.php_history"
 alias hist="$GUI_EDITOR ~/.zsh_history ~/.pry_history"
 alias oh="$GUI_EDITOR ~/.oh-my-zsh"
+alias code="/usr/local/bin/code -n "
