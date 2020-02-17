@@ -14,8 +14,13 @@ PATH=$PATH:/bin
 PATH=$PATH:/usr/local/sbin
 PATH=$PATH:/usr/sbin
 PATH=$PATH:/sbin
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-if [[ -d $HOME/go/bin/ ]];then 
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+if [[ -d $HOME/go/bin/ ]];then
     PATH=$PATH:$HOME/go/bin
+fi
+
+# Put rbenv shims in front of path if they exist
+if [[ -d $HOME/.rbenv/shims/ ]];then
+    PATH=~/.rbenv/shims:$PATH
 fi
 export PATH
