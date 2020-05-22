@@ -14,7 +14,7 @@ alias gh='git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short '
 alias gha='git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short --all '
 alias gl='git log --oneline'
 
-alias be='bundle exec'
+alias be="bundle exec "
 alias ts="date +%s"
 alias subl="/usr/local/bin/subl --new-window "
 # created function
@@ -65,3 +65,8 @@ alias hist_all="$GUI_EDITOR ~/.pry_history ~/.zsh_history ~/.mysql_history ~/.ir
 alias hist="$GUI_EDITOR ~/.zsh_history ~/.pry_history"
 alias oh="$GUI_EDITOR ~/.oh-my-zsh"
 alias code="/usr/local/bin/code -n "
+
+alias rspec="bundle exec rspec "
+alias rails="bundle exec rails "
+alias sidekiq="bundle exec sidekiq"
+alias rake="bundle exec rake "
