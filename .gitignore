@@ -6,6 +6,9 @@
 # temp files directories
 cache/
 log/
+*.swp
+.DS_Store
+
 custom/private/*
 !.keep
 !custom/private/empty.zsh
