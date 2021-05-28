@@ -9,6 +9,6 @@ function box_name {
 }
 
 export BOX_NAME=$(box_name)
-export VISUAL_CODE_EDITOR="code_wait"
+export VISUAL_CODE_EDITOR="mvim -f"
 export CODE_EDITOR="vim"
-export GUI_EDITOR="code"
+export GUI_EDITOR="mvim"
